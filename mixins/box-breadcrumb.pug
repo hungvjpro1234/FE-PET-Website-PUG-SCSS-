@@ -1,0 +1,7 @@
+mixin breadcrumb(list)
+	nav.box-breadcrumb  
+		ul.box-breadcrumb__wrap
+			each item in list
+				li.box-breadcrumb__item 
+					a.box-breadcrumb__link(href=item.link) #{item.title}
+					i.fa-solid.fa-chevron-right 

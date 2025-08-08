@@ -1,0 +1,93 @@
+doctype html
+html 
+  head 
+  meta( charset="UTF-8" ) 
+  meta( name="viewport" content="width=device-width, initial-scale=1.0" ) 
+  block title 
+  link( rel="stylesheet" href="assets/css/style.css" ) 
+  link( rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" ) 
+
+  body 
+    // Header
+    header.header
+      .container
+        .header__wrap
+          button.header__button-menu( href="#" )
+            i(class="fa-solid fa-bars")
+          .header__logo
+            a( href="index.html" )
+              img( src="assets/images/logo.svg" alt="Monitor" )
+          nav.header__menu
+            ul
+              li
+                a( href="index.html" ) Trang chủ
+              li
+                a( href="#" ) Danh Mục
+              li
+                a( href="#" ) Giới Thiệu
+              li
+                a( href="#" ) Liên Hệ
+          button.header__button-search
+            i( class="fa-solid fa-magnifying-glass" )
+          form.header__search( action="" )
+            button
+              i( class="fa-solid fa-magnifying-glass" )
+            input( type="text" placeholder="Nhập từ khóa..." )
+          a.button( href="#" ) Tham Gia Cộng Đồng
+    // End Header
+
+    block main
+
+    // Footer
+    .footer
+      .container
+        .footer__top
+          h3.footer__content Đăng ký ngay để không bỏ lỡ các chương trình của chúng tôi
+          form.footer__register(action="#")
+            input(
+              placeholder="Nhập email của bạn..." 
+              type="email"
+              )
+            button Đăng Ký Ngay
+        .footer__middle
+          nav.footer__pages
+            ul
+              li
+                a(href="#") Trang Chủ
+              li
+                a(href="#") Danh Mục
+              li
+                a(href="#") Giới Thiệu
+              li
+                a(href="#") Liên Hệ
+          nav.footer__socials
+            ul
+              li
+                a(href="#")
+                  i.fa-brands.fa-facebook
+              li
+                a(href="#")
+                  i.fa-brands.fa-x-twitter
+              li
+                a(href="#")
+                  i.fa-brands.fa-instagram
+              li
+                a(href="#")
+                  i.fa-brands.fa-youtube
+        .footer__bottom
+          p.footer__copyright © 2023 28Tech. All rights reserved.
+          .footer__logo
+            img(
+              alt="monito" 
+              src="assets/images/logo.svg"
+              )
+          .footer__links
+            a(href="#") Điều khoản dịch vụ
+            a(href="#") Chính sách bảo mật
+    // End Footer
+
+
+
+

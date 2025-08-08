@@ -1,0 +1,157 @@
+extends ../layouts/default.pug
+include ../mixins/box-head.pug
+include ../mixins/product-item.pug
+include ../mixins/blog-item.pug
+
+block title 
+  title Home 
+
+block main
+  // Section 1
+  .section-1
+    .container
+      .section-1__wrap
+        img.section-1__bg-top( src="assets/images/bg-top.svg" alt="" )
+        img.section-1__bg-left( src="assets/images/bg-left.svg" alt="" ) 
+        .section-1__content
+          h1.section-1__title Thêm Một Bạn
+          h2.section-1__sub-title Thêm Ngàn Niềm Vui!
+          p.section-1__desc Có một con thú cưng đồng nghĩa với việc bạn có thêm niềm vui mới. Chúng tôi có hơn 200 con thú cưng khác nhau có thể đáp ứng nhu cầu của bạn!
+          .section-1__buttons
+            a( href="" class="button button--outline" )
+              | Giới Thiệu <i class="fa-regular fa-circle-play"></i>
+            a( href="" class="button button--under" ) Khám Phá Ngay
+        img.section-1__bg-bottom( src="assets/images/bg-bottom.svg" alt="" ) 
+
+        .section-1__image
+          img.section-1__bg-right( src="assets/images/bg-right.svg" alt="" )
+          img.section-1__main( src="assets/images/image-1.png" alt="" )
+  // End Section 1
+
+  // Section 2
+  .section-2
+    .container
+      +box-head(
+        "Có gì mới?",
+        "một số vật nuôi của chúng tôi",
+        "product-list.html"
+      )
+      .section-2__wrap
+        +product-item(
+          "product-detail.html",
+          "assets/images/product-image1.jpg",
+          "MO231 - Pomeranian White",
+          "Đực",
+          "02 tháng",
+          "6.900.000 VND"
+        )
+        +product-item(
+          "product-detail.html",
+          "assets/images/product-image2.jpg",
+          "MO231 - Pomeranian White",
+          "Đực",
+          "02 tháng",
+          "6.900.000 VND"
+        )
+        +product-item(
+          "product-detail.html",
+          "assets/images/product-image3.jpg",
+          "MO231 - Pomeranian White",
+          "Đực",
+          "02 tháng",
+          "6.900.000 VND"
+        )
+        +product-item(
+          "product-detail.html",
+          "assets/images/product-image4.jpg",
+          "MO231 - Pomeranian White",
+          "Đực",
+          "02 tháng",
+          "6.900.000 VND"
+        )
+        +product-item(
+          "product-detail.html",
+          "assets/images/product-image5.jpg",
+          "MO231 - Pomeranian White",
+          "Đực",
+          "02 tháng",
+          "6.900.000 VND"
+        )
+        +product-item(
+          "product-detail.html",
+          "assets/images/product-image6.jpg",
+          "MO231 - Pomeranian White",
+          "Đực",
+          "02 tháng",
+          "6.900.000 VND"
+        )
+        +product-item(
+          "product-detail.html",
+          "assets/images/product-image7.jpg",
+          "MO231 - Pomeranian White",
+          "Đực",
+          "02 tháng",
+          "6.900.000 VND"
+        )
+        +product-item(
+          "product-detail.html",
+          "assets/images/product-image8.jpg",
+          "MO231 - Pomeranian White",
+          "Đực",
+          "02 tháng",
+          "6.900.000 VND"
+        )
+
+      a.section-2__button-show-more(href="product-list.html")
+        | Xem thêm 
+        i.fa-solid.fa-angle-right
+  // End Section 2
+
+  // Section 3
+  include ../partials/section-3.pug
+  // End Section 3
+
+  // Section 4
+  .section-4
+    .container
+      +box-head(
+        "Có thể bạn đã biết?",
+        "Kiến thức thú cưng hữu ích",
+        "#"
+      )
+      .section-4__wrap
+        +blog-item(
+          "#",
+          "assets/images/blog-item1.jpg",
+          "#",
+          "Kiến thức thú cưng",
+          "Pomeranian là gì? Cách nhận biết chó Pomeranian",
+          "Việc chia khẩu phần ăn cho chó thoạt nghe có vẻ đơn giản nhưng có một số quy tắc bạn nên biết để chó cưng dễ dàng hấp thụ các chất dinh dưỡng trong khẩu phần ăn. Dành cho những người mới bắt đầu nuôi chó, đặc biệt là chó con mới sinh có sức đề kháng tương đối yếu."
+        )
+
+        +blog-item(
+          "#",
+          "assets/images/blog-item2.jpg",
+          "#",
+          "Kiến thức thú cưng",
+          "Pomeranian là gì? Cách nhận biết chó Pomeranian",
+          "Việc chia khẩu phần ăn cho chó thoạt nghe có vẻ đơn giản nhưng có một số quy tắc bạn nên biết để chó cưng dễ dàng hấp thụ các chất dinh dưỡng trong khẩu phần ăn. Dành cho những người mới bắt đầu nuôi chó, đặc biệt là chó con mới sinh có sức đề kháng tương đối yếu."
+        )
+
+        +blog-item(
+          "#",
+          "assets/images/blog-item3.jpg",
+          "#",
+          "Kiến thức thú cưng",
+          "Pomeranian là gì? Cách nhận biết chó Pomeranian",
+          "Việc chia khẩu phần ăn cho chó thoạt nghe có vẻ đơn giản nhưng có một số quy tắc bạn nên biết để chó cưng dễ dàng hấp thụ các chất dinh dưỡng trong khẩu phần ăn. Dành cho những người mới bắt đầu nuôi chó, đặc biệt là chó con mới sinh có sức đề kháng tương đối yếu."
+        )
+
+      a.section-4__button-show-more(href="#")
+        | Xem thêm
+        i.fa-solid.fa-chevron-right
+  // End Section 4
+
+
+
+

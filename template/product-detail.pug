@@ -1,0 +1,91 @@
+extends ../layouts/default.pug
+include ../mixins/box-breadcrumb.pug
+include ../mixins/product-item.pug
+
+block title
+	title Product Detail 
+
+block main
+	-
+		var dataBreadcrumb = [
+			{
+				link: "index.html",
+				title: "Trang chủ"
+			},
+			{
+				link: "#",
+				title: "Chó"
+			},
+			{
+				link: "#",
+				title: "Chó con"
+			},
+			{
+				link: "#",
+				title: "Shiba Inu Màu Nâu Đỏ"
+			}
+		];
+	// product detail
+	.product-detail
+		.container
+			.product-detail__wrap 
+				.product-detail__image
+					.product-detail__image-main
+						img(src="assets/images/pet-1.jpg", alt="Shiba Inu Màu Nâu Đỏ")
+					.product-detail__image-wrap
+						.product-detail__image-item
+							img(src="assets/images/pet-1.jpg", alt="Shiba Inu Màu Nâu Đỏ")
+						.product-detail__image-item
+							img(src="assets/images/pet-2.jpg", alt="Shiba Inu Màu Nâu Đỏ")
+						.product-detail__image-item
+							img(src="assets/images/pet-3.jpg", alt="Shiba Inu Màu Nâu Đỏ")
+						.product-detail__image-item
+							img(src="assets/images/pet-4.jpg", alt="Shiba Inu Màu Nâu Đỏ")
+						.product-detail__image-item
+							img(src="assets/images/pet-5.jpg", alt="Shiba Inu Màu Nâu Đỏ")
+						//- .product-detail__image-item
+							img(src="assets/images/pet-2.jpg", alt="Shiba Inu Màu Nâu Đỏ")
+				.product-detail__content
+					.product-detail__content-breadcrumn
+						+breadcrumb(dataBreadcrumb)
+					h2.product-detail__content-title Shiba Inu Màu Nâu Đỏ
+					h3.product-detail__content-price 12.000.000 VND
+					.product-detail__content-buttons 
+						a.button(href="#") Liên Hệ
+						a.button.button--outline 
+							<i class="fa-regular fa-comment-dots"></i>
+							|	Chat với Monito 
+					table.product-detail__content-table 
+						tbody 
+							tr 
+								td SKU 
+								td #1000078
+							tr 
+								td Giống
+								td Cái
+							tr 
+								td Tuổi
+								td 2 tháng
+							tr 
+								td Kích thước
+								td Nhỏ
+							tr 
+								td Màu sắc
+								td Nâu đỏ
+							tr 
+								td Mô tả ngắn
+								td Giống thuần chủng Shih Tzu. Cấu trúc cơ thể tốt. Với chứng chỉ MKA và Microchip. Cha từ dòng dõi vô địch.
+					.product-detail__content-share 
+						p 
+							<i class="fa-solid fa-share-nodes"></i>
+							|	Chia sẻ:
+						.product-detail__content-share-link
+							a(href="") 
+								<i class="fa-brands fa-facebook"></i>
+							a(href="")
+								<i class="fa-brands fa-instagram"></i>
+							a(href="") 
+								<i class="fa-brands fa-twitter"></i>
+							a(href="") 
+								<i class="fa-brands fa-youtube"></i>
+	// End product detail

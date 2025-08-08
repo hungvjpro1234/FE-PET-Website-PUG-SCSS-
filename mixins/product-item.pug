@@ -1,0 +1,20 @@
+mixin product-item( link, linkImage, title, detailType, detailAge, price )
+	.product-item
+		.product-item__image
+			a(href=link)
+				img(
+					alt=title  
+					src=linkImage
+					)
+		.product-item__content
+			h3.product-item__title
+				a(href=link) #{title}
+			.product-item__desc
+				p.product-item__detail
+					| Giống: 
+					b #{detailType}
+				.product-item__dot
+				p.product-item__detail
+					| Tuổi: 
+					b #{detailAge}
+			.product-item__price #{price}

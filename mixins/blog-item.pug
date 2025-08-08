@@ -1,0 +1,13 @@
+mixin blog-item(link, linkImage, linkTag, textTag, title, desc)
+	.blog-item
+		.blog-item__image
+			a(href=link)
+				img(
+					alt="blog" 
+					src=linkImage
+					)
+		.blog-item__content
+			a.blog-item__tag(href=linkTag) #{textTag}
+			h3.blog-item__title
+				a(href="") #{title}
+			p.blog-item__desc #{desc}

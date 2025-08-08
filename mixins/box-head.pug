@@ -1,0 +1,11 @@
+mixin box-head(question, subTitle, link)
+  .box-head
+    .box-head__left
+      p.box-head__question #{question}
+      h3.box-head__sub-title #{subTitle}
+    if(link)
+      .box-head__right
+        a(href=link class="button button--outline")
+          | Xem thêm <i class="fa-solid fa-chevron-right"></i>
+
+

@@ -1,0 +1,185 @@
+extends ../layouts/default.pug
+include ../mixins/box-breadcrumb.pug
+include ../mixins/product-item.pug
+
+block title
+	title Product List 
+
+block main 
+	//box-breadcrumbs
+	-
+		var dataBreadcrumb = [
+			{
+				link: "index.html",
+				title: "Trang chủ"
+			},
+			{
+				link: "#",
+				title: "Chó"
+			},
+			{
+				link: "#",
+				title: "Chó nhỏ"
+			}
+		];
+	.breadcrumb-product-list
+		.container
+			+breadcrumb(dataBreadcrumb)
+	//End box-breadcrumbs
+
+	//partials Section 3
+	include ../partials/section-3.pug
+	//End partials Section 3
+
+	//layout products
+	.layout-product
+		.container
+			.layout-product__wrap
+				.layout-product__left
+					.filter
+						.filter__title 
+							i.fa-solid.fa-filter
+							h3 Bộ lọc
+						.filter__list 
+							.filter__item
+								.filter__item-title Giống
+								.filter__item-choose
+									.filter__item-option
+										input(type="checkbox" id="male")
+										label(for="male") Đực
+									.filter__item-option
+										input(type="checkbox" id="female")
+										label(for="female") Cái
+							.filter__item
+								.filter__item-title Màu sắc
+								.filter__item-choose
+									.filter__item-option
+										input(type="checkbox" id="grey")
+										label(for="grey") Xám
+									.filter__item-option
+										input(type="checkbox" id="black")
+										label(for="black") Đen
+									.filter__item-option
+										input(type="checkbox" id="white")
+										label(for="white") Trắng
+							.filter__item
+								.filter__item-title Kích thước
+								.filter__item-choose
+									.filter__item-option
+										input(type="checkbox" id="small")
+										label(for="small") Nhỏ
+									.filter__item-option
+										input(type="checkbox" id="medium")
+										label(for="medium") Vừa
+									.filter__item-option
+										input(type="checkbox" id="big")
+										label(for="big") Lớn 
+				.layout-product__right
+					.layout-product__top
+						h2.layout-product__title Chó Nhỏ
+						h3.layout-product__filter
+							<i class="fa-solid fa-filter"></i>
+							|	Bộ lọc
+					.layout-product__list 
+						+product-item(
+							"product-detail.html",
+							"assets/images/product-image1.jpg",
+							"MO231 - Pomeranian White",
+							"Đực",
+							"02 tháng",
+							"6.900.000 VND"
+						)
+						+product-item(
+							"product-detail.html",
+							"assets/images/product-image2.jpg",
+							"MO231 - Pomeranian White",
+							"Đực",
+							"02 tháng",
+							"6.900.000 VND"
+						)
+						+product-item(
+							"product-detail.html",
+							"assets/images/product-image3.jpg",
+							"MO231 - Pomeranian White",
+							"Đực",
+							"02 tháng",
+							"6.900.000 VND"
+						)
+						+product-item(
+							"product-detail.html",
+							"assets/images/product-image4.jpg",
+							"MO231 - Pomeranian White",
+							"Đực",
+							"02 tháng",
+							"6.900.000 VND"
+						)
+						+product-item(
+							"product-detail.html",
+							"assets/images/product-image5.jpg",
+							"MO231 - Pomeranian White",
+							"Đực",
+							"02 tháng",
+							"6.900.000 VND"
+						)
+						+product-item(
+							"product-detail.html",
+							"assets/images/product-image6.jpg",
+							"MO231 - Pomeranian White",
+							"Đực",
+							"02 tháng",
+							"6.900.000 VND"
+						)
+						+product-item(
+							"product-detail.html",
+							"assets/images/product-image7.jpg",
+							"MO231 - Pomeranian White",
+							"Đực",
+							"02 tháng",
+							"6.900.000 VND"
+						)
+						+product-item(
+							"product-detail.html",
+							"assets/images/product-image8.jpg",
+							"MO231 - Pomeranian White",
+							"Đực",
+							"02 tháng",
+							"6.900.000 VND"
+						)
+						+product-item(
+							"product-detail.html",
+							"assets/images/product-image9.jpg",
+							"MO231 - Pomeranian White",
+							"Đực",
+							"02 tháng",
+							"6.900.000 VND"
+						)
+						+product-item(
+							"product-detail.html",
+							"assets/images/product-image3.jpg",
+							"MO231 - Pomeranian White",
+							"Đực",
+							"02 tháng",
+							"6.900.000 VND"
+						)
+					.layout-product__pagination 
+						.pagination
+							.pagination__wrap
+								a.pagination__item(href="#") <i class="fa-solid fa-arrow-left"></i>
+								a.pagination__item(href="#") 1
+								a.pagination__item(href="#") 2
+								a.pagination__item(href="#") 3
+								a.pagination__item(href="#") 4
+								a.pagination__item.pagination__item--disable(href="#") ...
+								a.pagination__item(href="#") 28
+								a.pagination__item(href="#") <i class="fa-solid fa-arrow-right"></i>			
+	//End layout products
+
+
+
+
+
+
+
+
+
+
